@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overview</title>
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"></button>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <!-- <a href="resume.html" class="nav-link">RESUME</a> -->
+            <a href="portfolio.html" class="nav-link active">PORTFOLIO</a>
+            <!-- <a href="blog.html" class="nav-link">BLOG</a> -->
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav" data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/prof.jpg" alt="profile">
+            </div>
+            <h1 class="profile-name">Anurag Dhiman</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Full Stack Engineer</span>
+            </div>
+            <nav class="social-links">
+                <a href="https://www.facebook.com/anurag.dhiman.7737" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/anuragdhiman/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:avdhiman2@gmail.com" class="social-link" target="_blank"><i class="fa fa-envelope-open"></i></a>
+                <a href="https://github.com/AnuragDhiman400" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            </nav>
+            <div class="widget">
+                <h5 class="widget-title">personal information</h5>
+                <div class="widget-content">
+                    <p>PHONE : +1 519 807 5712</p>
+                    <p>MAIL : avdhiman2@gmail.com</p>
+                    <p>Location : Toronto, Canada</p>
+                    <a href="assets/resume/Anurag_Resume.pdf" download="Anurag Resume" target="_blank"><button class="btn btn-download-cv btn-primary rounded-pill"> <img src="assets/images/download.svg" alt="download"
+                        class="btn-img">DOWNLOAD RESUME </button></a>
+
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">LANGUAGES</h5>
+                        <p>English : fluent</p>
+                        <p>Hindi : fluent</p>
+                        <p>Punjabi : native</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">INTERESTS</h5>
+                        <p>Video games</p>
+                        <p>Travelling</p>
+                        <p>Badminton</p>
+                        <p>Songs</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides">
+
+                    <img src="assets/images/project_4-a.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="assets/images/project_4-c.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="assets/images/project_4-b.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides">
+
+                    <img src="assets/images/project_4-d.png" style="width:100%">
+
+                </div>
+
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+
+
+
+
+
+
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active-1", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active-1";
+                }
+            </script>
+
+
+
+
+            <section class="intro-section">
+                <h2>Todo Application(Node.js)</h2>
+                <p>
+                    This is the Todo Application system helps to maintain daily tasks in a uniform pattern. This application is built using Node.js and MongoDB Database.
+
+
+
+                </p>
+            </section>
+
+
+            <section class="intro-section">
+                <h4>Github Link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/AnuragDhiman400/Todo-application-node.js" type="button" class="btn btn-primary" target="_blank">Click for Github Repository</a></h4>
+            </section>
+
+
+
+            <!-- 
+<section class="intro-section">
+    <h4>Documentation:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="assets/Documentation for projects/Documentation for feedback system.pdf" download="Anurag Resume" target="_blank" type="button" class="btn btn-primary" target="_blank">Click for Documentation</a></h4>
+
+</section> -->
+            <section class="intro-section">
+                <h4>Live link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://todo-application-node.herokuapp.com/todo" type="button" class="btn btn-primary" target="_blank">Click for Live View</a></h4>
+            </section>
+
+
+
+
+        </main>
+    </div>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
+</body>
+
+</html>
